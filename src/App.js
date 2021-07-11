@@ -3,8 +3,8 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <h4>SPLI</h4>
-      <h4>TTER</h4>
+      <h2>SPLI</h2>
+      <h2>TTER</h2>
     </div>
   );
 }
