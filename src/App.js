@@ -8,6 +8,7 @@ const Container = styled.div`
 
 const Card = styled.div`
   display: flex;
+  align-items: center;
   height: 481px;
   width: 920px;
   border-radius: 25px;
@@ -93,6 +94,14 @@ const PeopleInput = styled.input`
   padding-right: 17px;
 `;
 
+const ResultContainer = styled.div`
+  height: 417px;
+  width: 413px;
+  background: #00474b;
+  border-radius: 15px;
+  /* margin: 48px; */
+`;
+
 function App() {
   return (
     <Container>
@@ -125,6 +134,7 @@ function App() {
             <PeopleInput value="5"></PeopleInput>
           </PeopleWrapper>
         </InputContainer>
+        <ResultContainer></ResultContainer>
       </Card>
     </Container>
   );
