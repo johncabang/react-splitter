@@ -99,7 +99,22 @@ const ResultContainer = styled.div`
   width: 413px;
   background: #00474b;
   border-radius: 15px;
-  /* margin: 48px; */
+`;
+
+const TipResultWrapper = styled.div`
+  /* height: 71px; */
+  width: 333px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+`;
+
+const TotalResultWrapper = styled.div`
+  /* height: 71px; */
+  width: 333px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
 `;
 
 function App() {
@@ -134,7 +149,28 @@ function App() {
             <PeopleInput value="5"></PeopleInput>
           </PeopleWrapper>
         </InputContainer>
-        <ResultContainer></ResultContainer>
+        <ResultContainer>
+          <TipResultWrapper>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                // flexDirection: "column",
+              }}
+            >
+              <h3>Tip Amount</h3>
+              <p>/ person</p>
+            </div>
+            <h1>$4.27</h1>
+          </TipResultWrapper>
+          <TotalResultWrapper>
+            <div>
+              <h3>Total</h3>
+              <p>/ person</p>
+            </div>
+            <h1>$32.79</h1>
+          </TotalResultWrapper>
+        </ResultContainer>
       </Card>
     </Container>
   );

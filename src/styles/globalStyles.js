@@ -16,6 +16,28 @@ body {
   background-color: #c5e4e7;
 }
 
+p {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 19px;
+  color: #7F9D9F;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 71px;
+  letter-spacing: -1px;
+  color: #26C2AE;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+
 `;
 
 export default GlobalStyles;
