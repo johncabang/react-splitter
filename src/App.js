@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const Container = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   height: 100vh;
 `;
@@ -13,7 +15,6 @@ const Card = styled.div`
   width: 920px;
   border-radius: 25px;
   background-color: #fff;
-  margin: 0 auto;
 `;
 
 const BillWrapper = styled.div`
@@ -171,7 +172,7 @@ function App() {
         <InputContainer>
           <BillWrapper>
             Bill
-            <BillInput value="142.55"></BillInput>
+            <BillInput placeholder="0"></BillInput>
           </BillWrapper>
           <TipWrapper>
             Select Tip %
@@ -193,7 +194,7 @@ function App() {
           </TipWrapper>
           <PeopleWrapper>
             Number of People
-            <PeopleInput value="5"></PeopleInput>
+            <PeopleInput placeholder="0"></PeopleInput>
           </PeopleWrapper>
         </InputContainer>
         <ResultContainer>
@@ -201,8 +202,8 @@ function App() {
             <div
               style={{
                 display: "flex",
-                alignItems: "center",
-                // flexDirection: "column",
+                flexDirection: "column",
+                justifyContent: "center",
               }}
             >
               <h3>Tip Amount</h3>
@@ -211,7 +212,13 @@ function App() {
             <h1>$4.27</h1>
           </TipResultWrapper>
           <TotalResultWrapper>
-            <div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
               <h3>Total</h3>
               <p>/ person</p>
             </div>
