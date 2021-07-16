@@ -11,7 +11,8 @@ import {
 } from "../../styles";
 
 const Results = () => {
-  const [{ billInput, peopleInput, tipAmount }] = useContext(SplitterContext);
+  const [{ billInput, setBillInput, peopleInput, tipAmount }] =
+    useContext(SplitterContext);
 
   console.log("this is billInput from Results component " + billInput);
 
@@ -38,7 +39,7 @@ const Results = () => {
           <h1>${totalPerPerson}</h1>
         </TotalResultWrapper>
       </div>
-      <ResetButton>reset</ResetButton>
+      <ResetButton onClick={() => setBillInput(0)}>reset</ResetButton>
     </ResultsContainer>
   );
 };
