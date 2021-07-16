@@ -110,11 +110,30 @@ const TipResultWrapper = styled.div`
 `;
 
 const TotalResultWrapper = styled.div`
-  /* height: 71px; */
   width: 333px;
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
+`;
+
+const ResetButton = styled.button`
+  height: 48px;
+  width: 333px;
+  margin: 0 40px;
+  text-transform: uppercase;
+  line-height: 30px;
+
+  border-radius: 5px;
+  background-color: #26c2ae;
+  color: #00474b;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #9fe8df;
+  }
 `;
 
 function App() {
@@ -170,6 +189,7 @@ function App() {
             </div>
             <h1>$32.79</h1>
           </TotalResultWrapper>
+          <ResetButton>reset</ResetButton>
         </ResultContainer>
       </Card>
     </Container>
