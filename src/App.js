@@ -108,6 +108,10 @@ const ResultContainer = styled.div`
   width: 413px;
   background: #00474b;
   border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 40px 0;
 `;
 
 const TipResultWrapper = styled.div`
@@ -139,6 +143,7 @@ const ResetButton = styled.button`
   font-weight: bold;
   border: none;
   cursor: pointer;
+  /* margin-bottom: 40px; */
 
   &:hover {
     background-color: #9fe8df;
@@ -198,32 +203,34 @@ function App() {
           </PeopleWrapper>
         </InputContainer>
         <ResultContainer>
-          <TipResultWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-            >
-              <h3>Tip Amount</h3>
-              <p>/ person</p>
-            </div>
-            <h1>$4.27</h1>
-          </TipResultWrapper>
-          <TotalResultWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
-            >
-              <h3>Total</h3>
-              <p>/ person</p>
-            </div>
-            <h1>$32.79</h1>
-          </TotalResultWrapper>
+          <div>
+            <TipResultWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <h3>Tip Amount</h3>
+                <p>/ person</p>
+              </div>
+              <h1>$4.27</h1>
+            </TipResultWrapper>
+            <TotalResultWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                }}
+              >
+                <h3>Total</h3>
+                <p>/ person</p>
+              </div>
+              <h1>$32.79</h1>
+            </TotalResultWrapper>
+          </div>
           <ResetButton>reset</ResetButton>
         </ResultContainer>
       </Card>
