@@ -3,8 +3,8 @@ import React, { useState, createContext } from "react";
 const SplitterContext = createContext();
 
 const SplitterProvider = ({ children }) => {
-  const [billInput, setBillInput] = useState(10);
-  const [peopleInput, setPeopleInput] = useState(20);
+  const [billInput, setBillInput] = useState(0);
+  const [peopleInput, setPeopleInput] = useState(0);
   const [tipAmount, setTipAmount] = useState(0);
   const [total, setTotal] = useState(0);
 

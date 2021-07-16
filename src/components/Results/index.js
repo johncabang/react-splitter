@@ -36,7 +36,7 @@ const Results = () => {
             <h3>Total</h3>
             <p>/ person</p>
           </StyledResultTitle>
-          <h1>${totalPerPerson}</h1>
+          {peopleInput ? <h1>${totalPerPerson}</h1> : <h1>${peopleInput}</h1>}
         </TotalResultWrapper>
       </div>
       <ResetButton onClick={() => setBillInput(0)}>reset</ResetButton>
