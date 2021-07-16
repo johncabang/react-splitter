@@ -144,6 +144,27 @@ const ResetButton = styled.button`
   }
 `;
 
+const CustomInput = styled.input`
+  height: 48px;
+  width: 117px;
+  border-radius: 5px;
+  background-color: #f3f9fa;
+  color: #547878;
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 16px;
+  text-align: center;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border: 2px solid #26c2ae;
+  }
+`;
+
 function App() {
   return (
     <Container>
@@ -168,7 +189,7 @@ function App() {
               <TipButton value=".15">15%</TipButton>
               <TipButton value=".25">25%</TipButton>
               <TipButton value=".5">50%</TipButton>
-              <TipButton>Custom</TipButton>
+              <CustomInput value="Custom" />
             </div>
           </TipWrapper>
           <PeopleWrapper>
