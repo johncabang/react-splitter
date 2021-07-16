@@ -45,7 +45,10 @@ const Input = () => {
           <TipButton onClick={() => setTipAmount(0.15)}>15%</TipButton>
           <TipButton onClick={() => setTipAmount(0.25)}>25%</TipButton>
           <TipButton onClick={() => setTipAmount(0.5)}>50%</TipButton>
-          <CustomInput value="Custom" />
+          <CustomInput
+            placeholder="Custom"
+            onChange={(event) => setTipAmount(event.target.value)}
+          />
         </StyledSelectTipWrapper>
       </TipWrapper>
       <PeopleWrapper>
