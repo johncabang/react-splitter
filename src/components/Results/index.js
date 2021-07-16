@@ -15,6 +15,11 @@ const Results = () => {
 
   console.log("this is billInput from Results component " + billInput);
 
+  let tipPerPerson = parseFloat(billInput * tipAmount).toFixed(2);
+  let totalPerPerson = parseFloat(
+    (billInput * tipAmount) / peopleInput
+  ).toFixed(2);
+
   return (
     <ResultsContainer>
       <div>
@@ -23,14 +28,14 @@ const Results = () => {
             <h3>Tip Amount</h3>
             <p>/ person</p>
           </StyledResultTitle>
-          <h1>$0.00</h1>
+          <h1>${tipPerPerson}</h1>
         </TipResultWrapper>
         <TotalResultWrapper>
           <StyledResultTitle>
             <h3>Total</h3>
             <p>/ person</p>
           </StyledResultTitle>
-          <h1>${billInput}</h1>
+          <h1>${totalPerPerson}</h1>
         </TotalResultWrapper>
       </div>
       <ResetButton>reset</ResetButton>
