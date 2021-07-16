@@ -33,10 +33,10 @@ const BillInput = styled.input`
   font-weight: 700;
   text-align: right;
   padding-right: 17px;
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    cursor: pointer;
     border: 2px solid #26c2ae;
   }
 `;
@@ -94,10 +94,10 @@ const PeopleInput = styled.input`
   font-weight: 700;
   text-align: right;
   padding-right: 17px;
+  cursor: pointer;
 
   &:hover,
   &:focus {
-    cursor: pointer;
     border: 2px solid #26c2ae;
   }
 `;
@@ -160,7 +160,6 @@ const CustomInput = styled.input`
 
   &:hover,
   &:focus {
-    cursor: pointer;
     border: 2px solid #26c2ae;
   }
 `;
