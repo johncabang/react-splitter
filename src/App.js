@@ -34,7 +34,8 @@ const BillInput = styled.input`
   text-align: right;
   padding-right: 17px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     cursor: pointer;
     border: 2px solid #26c2ae;
   }
@@ -70,7 +71,8 @@ const TipButton = styled.button`
   margin-bottom: 16px;
 
   &:hover {
-    background-color: #26c2ae;
+    background-color: #9fe8df;
+    color: #00474b;
   }
 `;
 
@@ -92,6 +94,12 @@ const PeopleInput = styled.input`
   font-weight: 700;
   text-align: right;
   padding-right: 17px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    border: 2px solid #26c2ae;
+  }
 `;
 
 const ResultContainer = styled.div`
