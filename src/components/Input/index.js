@@ -15,15 +15,27 @@ import {
 } from "../../styles";
 
 const Input = () => {
-  const [{ billInput, peopleInput, tipAmount, setTipAmount }] =
-    useContext(SplitterContext);
+  const [
+    {
+      billInput,
+      setBillInput,
+      peopleInput,
+      setPeopleInput,
+      tipAmount,
+      setTipAmount,
+    },
+  ] = useContext(SplitterContext);
   // console.log(billInput);
 
   return (
     <InputContainer>
       <BillWrapper>
         Bill
-        <BillInput placeholder={billInput}></BillInput>
+        <BillInput
+          placeholder={billInput}
+          onChange={(event) => setBillInput(event.target.value)}
+        ></BillInput>
+        {console.log("This is billInput " + billInput)}
       </BillWrapper>
       <TipWrapper>
         Select Tip %
@@ -38,9 +50,13 @@ const Input = () => {
       </TipWrapper>
       <PeopleWrapper>
         Number of People
-        <PeopleInput placeholder={peopleInput}></PeopleInput>
+        <PeopleInput
+          placeholder={peopleInput}
+          onChange={(event) => setPeopleInput(event.target.value)}
+        ></PeopleInput>
+        {console.log("This is # of peopleInput " + peopleInput)}
       </PeopleWrapper>
-      {console.log(tipAmount)}
+      {console.log("This is the " + tipAmount)}
     </InputContainer>
   );
 };
