@@ -23,6 +23,7 @@ export const BillWrapper = styled.div`
   height: 78px;
   width: 100%;
   font-weight: 700;
+  position: relative;
 `;
 
 export const BillInput = styled.input`
@@ -36,11 +37,18 @@ export const BillInput = styled.input`
   padding-right: 17px;
   cursor: pointer;
   margin-top: 6px;
+  padding-left: 24px;
 
   &:hover,
   &:focus {
     border: 2px solid #26c2ae;
   }
+`;
+
+export const DollarIcon = styled.svg`
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
 `;
 
 export const InputContainer = styled.div`

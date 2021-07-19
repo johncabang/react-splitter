@@ -7,6 +7,7 @@ const SplitterProvider = ({ children }) => {
   const [peopleInput, setPeopleInput] = useState(0);
   const [tipAmount, setTipAmount] = useState(0);
   const [total, setTotal] = useState(0);
+  const [customTipInput, setCustomTipInput] = useState(0);
 
   const value = {
     billInput,
@@ -17,6 +18,8 @@ const SplitterProvider = ({ children }) => {
     setTipAmount,
     total,
     setTotal,
+    customTipInput,
+    setCustomTipInput,
   };
 
   return (
