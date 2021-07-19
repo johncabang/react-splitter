@@ -32,7 +32,8 @@ const Input = () => {
       <BillWrapper>
         Bill
         <BillInput
-          placeholder={billInput}
+          value={billInput}
+          onFocus={() => setBillInput("")}
           onChange={(event) => setBillInput(event.target.value)}
         ></BillInput>
         {console.log("This is billInput " + billInput)}
@@ -54,12 +55,14 @@ const Input = () => {
       <PeopleWrapper>
         Number of People
         <PeopleInput
-          placeholder={peopleInput}
+          // placeholder="0"
+          value={peopleInput}
+          onFocus={() => setPeopleInput("")}
           onChange={(event) => setPeopleInput(event.target.value)}
         ></PeopleInput>
         {console.log("This is # of peopleInput " + peopleInput)}
       </PeopleWrapper>
-      {console.log("This is the " + tipAmount)}
+      {console.log("This is the tipAmount " + tipAmount)}
     </InputContainer>
   );
 };

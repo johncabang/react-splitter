@@ -11,15 +11,22 @@ import {
 } from "../../styles";
 
 const Results = () => {
-  const [{ billInput, setBillInput, peopleInput, tipAmount }] =
+  const [{ billInput, setBillInput, peopleInput, setPeopleInput, tipAmount }] =
     useContext(SplitterContext);
 
-  console.log("this is billInput from Results component " + billInput);
+  console.log("This is billInput from Results component " + billInput);
 
   let tipPerPerson = parseFloat(billInput * tipAmount).toFixed(2);
   let totalPerPerson = parseFloat(
     (billInput * tipAmount) / peopleInput
   ).toFixed(2);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // clearing the values
+    setBillInput(0);
+    setPeopleInput(0);
+  };
 
   return (
     <ResultsContainer>
@@ -39,7 +46,7 @@ const Results = () => {
           {peopleInput ? <h1>${totalPerPerson}</h1> : <h1>${peopleInput}</h1>}
         </TotalResultWrapper>
       </div>
-      <ResetButton onClick={() => setBillInput(0)}>reset</ResetButton>
+      <ResetButton onClick={handleSubmit}>reset</ResetButton>
     </ResultsContainer>
   );
 };
